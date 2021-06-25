@@ -9,17 +9,10 @@ public class HologramAlignment : MonoBehaviour
 {
     
     public GameObject TargetObject;
-
-    [Header("targetCoordinates")]
-    public float TPosX;
-    public float TPosY;
-    public float TPosZ;
-
-    [Header("target rotation")]
-    public float TRotX;
-    public float TRotY;
-    public float TRotZ;
+    public Vector3 TargetPosition;
+    public Quaternion TargetRotation;
     // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -30,11 +23,8 @@ public class HologramAlignment : MonoBehaviour
     {
         if (Checkalignment())
         {
-            Instantiate(TargetObject, new Vector3(TPosX, TPosY, TPosZ), Quaternion.Euler(new Vector3(TRotX, TRotY, TRotZ)));
+            Instantiate(TargetObject, TargetPosition, TargetRotation);
             Destroy(this.gameObject);
-            
-            
-            //Debug.Log("OKOKOK");
         }
         
 
@@ -48,11 +38,12 @@ public class HologramAlignment : MonoBehaviour
             if (child.name.Contains("hologram"))
             {
                 Vector3 LMPOs = child.GetComponent<AssignLandmark>().LMPosition;
-                if (Math.Abs(child.transform.position.x - LMPOs.x) > 0.5)
+                Debug.Log(child.transform.position);
+                if (Math.Abs(child.transform.position.x - LMPOs.x) > 1)
                     return false;
-                if (Math.Abs(child.transform.position.y - LMPOs.y) > 0.5)
+                if (Math.Abs(child.transform.position.y - LMPOs.y) > 1)
                     return false;
-                if (Math.Abs(child.transform.position.z - LMPOs.z) > 0.5)
+                if (Math.Abs(child.transform.position.z - LMPOs.z) > 1)
                     return false;
             }
             

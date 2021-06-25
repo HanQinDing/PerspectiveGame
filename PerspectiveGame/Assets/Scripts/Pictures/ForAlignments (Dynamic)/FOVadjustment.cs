@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class FOVadjustment : MonoBehaviour
 {
-    public Camera playerCamera2;
-    public float targetscale = 0.35f;
-    public float fov;
-    private float fullscreenscale = 0.433f;
+    public Camera playerCamera;
+    public float targetscale = 0.5f;
+    public bool reduced = false;
     // Start is called before the first frame update
     void Start()
     {
-        playerCamera2 = GetComponent<Camera>();
-        fov = playerCamera2.fieldOfView;
-        playerCamera2.fieldOfView = (targetscale / fullscreenscale) * fov;
+        playerCamera = GetComponent<Camera>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            if (reduced) {
+                playerCamera.fieldOfView = playerCamera.fieldOfView / targetscale ;
+            reduced = false;
+            }
+            else { 
+                playerCamera.fieldOfView = targetscale * playerCamera.fieldOfView;
+                reduced = true;
+            }
+        }
     }
 }

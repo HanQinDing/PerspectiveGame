@@ -18,87 +18,64 @@ public class CreatePicture : MonoBehaviour
     public GameObject pictureexample;
     public List<GameObject> Landmarks = new List<GameObject>();
     public float targetscale = 0.35f;
-    public float picutrezposition = 1.11f;
+    public float picutrezposition = 0.933f;
+    public float picscale = 0.5f;
+    // 1st try : 1.11f
 
-    private float fullscreenscale = 0.433f;
-    private bool check = false;
-    private int count = 0;
+    private bool created = false;
     private int HG_count = 1;
-    private float fov;
+    private string folderPath = "";
+    private GameObject pic;
     void Awake()
     {
         playerCamera = Player.transform.Find("Camera").GetComponent<Camera>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        folderPath = System.IO.Directory.GetCurrentDirectory() + $"/Assets/TargetObjects/" + this.gameObject.name + "/";
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
-            takepic();
-
-        if (System.IO.File.Exists($"ScreenShotbridge.png"))
+            takepic();             
+    }
+    private void LateUpdate()                                                                               //Had to create the object in Late Update as screenshot only runs at the end of the update
+    {
+        if (System.IO.File.Exists(folderPath+ $"/Screenshot_" +this.gameObject.name + ".png") & created == false) // Ensure the screenshot is created.
         {
-            if(count == 0)
+            Debug.Log("create");
+
+            GameObject newpic = Instantiate(pictureobj, pictureexample.transform.position, pictureexample.transform.rotation);
+            newpic.transform.parent = playerCamera.transform;
+            newpic.transform.localScale = new Vector3(picscale, picscale, picscale);            
+            newpic.GetComponent<HologramAlignment>().TargetObject = this.gameObject;
+            newpic.GetComponent<HologramAlignment>().TargetPosition = this.gameObject.transform.position;
+            newpic.GetComponent<HologramAlignment>().TargetRotation = this.gameObject.transform.rotation;
+
+
+                foreach (GameObject LM in Landmarks)
             {
-                check = true;
-                count = 1;
+                if (LM.GetComponent("AssignHolograms") as AssignHolograms != null)
+                {
+                    GameObject HG = LM.GetComponent<AssignHolograms>().hologram;
+                    GameObject newLMHologram = Instantiate(HG, LM.transform.position, LM.transform.rotation);
+                    newLMHologram.name = "hologram" + HG_count.ToString();
+                    newLMHologram.GetComponent<AssignLandmark>().Landmark = LM;
+                    newLMHologram.GetComponent<AssignLandmark>().LMPosition = LM.transform.position;
+                    newLMHologram.transform.parent = newpic.transform;
+                    HG_count += 1;
+                }
+
             }
+            created = true;
         }
         
-        
+      
     }
-    private void LateUpdate()
-    {
-        if(check == true) {
-         playerCamera.fieldOfView = fov;
-        GameObject newpic = Instantiate(pictureobj, pictureexample.transform.position, pictureexample.transform.rotation);
-         //   newpic.transform.position = playerCamera.WorldToScreenPoint(newpic);
-        newpic.transform.parent = playerCamera.transform;
-        //newpic.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
-        foreach (GameObject LM in Landmarks)
-        {
-            if (LM.GetComponent("AssignHolograms") as AssignHolograms != null)
-            {
-                GameObject HG = LM.GetComponent<AssignHolograms>().hologram;
-                GameObject newLMHologram = Instantiate(HG, LM.transform.position, LM.transform.rotation);
-                newLMHologram.name = "hologram" + HG_count.ToString();
-                newLMHologram.GetComponent<AssignLandmark>().Landmark = LM;
-                newLMHologram.GetComponent<AssignLandmark>().LMPosition = LM.transform.position;
-                //newLMHologram.transform.position = Vector3.Lerp(newLMHologram.transform.position, newpic.transform.position, 0.5f);
-                //newLMHologram.transform.position = Lerpwithoutclamp(newpic.transform.position, newLMHologram.transform.position, GettingFraction(fullscreenscale, 0.35f));
-                newLMHologram.transform.parent = newpic.transform;
-                //GettingFraction(fullscreenscale, 0.35f)
-                 HG_count += 1;
-            }
-
-        }
-            check = false;
-        }
-    }
-
-    /*float GettingFraction(float Fullscale, float currentscale)
-    {
-        float percentage = ((fullscreenscale - currentscale) / fullscreenscale) * 100;
-        return ((percentage + 100) / 100);
-
-        //((fullscreenscale - 0.35f) / fullscreenscale) + fullscreenscale)/ fullscreenscale
-    }
-    
-    Vector3 Lerpwithoutclamp(Vector3 A, Vector3 B, float t)
-    {
-        return A + (B - A) * t;
-    }*/
-
-    void takepic()
-    {
-        fov = playerCamera.fieldOfView;
-        playerCamera.fieldOfView = (targetscale / fullscreenscale) * fov;
-        ScreenCapture.CaptureScreenshot($"ScreenShotbridge.png", Supersize);
+    void takepic() // Take screenshot and save the picture at the designated path
+    {      
+        if (!System.IO.Directory.Exists(folderPath))
+            System.IO.Directory.CreateDirectory(folderPath);
+        var screenshotName ="Screenshot_" +this.gameObject.name + ".png";
+        ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(folderPath, screenshotName));
         
     }
 }
