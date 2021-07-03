@@ -46,9 +46,9 @@ public class CreatePicture : MonoBehaviour
             GameObject newpic = Instantiate(pictureobj, pictureexample.transform.position, pictureexample.transform.rotation);
             newpic.transform.parent = playerCamera.transform;
             newpic.transform.localScale = new Vector3(picscale, picscale, picscale);            
-            newpic.GetComponent<HologramAlignment>().TargetObject = this.gameObject;
-            newpic.GetComponent<HologramAlignment>().TargetPosition = this.gameObject.transform.position;
-            newpic.GetComponent<HologramAlignment>().TargetRotation = this.gameObject.transform.rotation;
+            newpic.GetComponent<PictureController>().TargetObject = this.gameObject;
+            newpic.GetComponent<PictureController>().TargetPosition = this.gameObject.transform.position;
+            newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.rotation;
 
 
                 foreach (GameObject LM in Landmarks)

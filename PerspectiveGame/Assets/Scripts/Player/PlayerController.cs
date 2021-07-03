@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log(isGrounded + "2");
+            //Debug.Log(isGrounded + "2");
             characterVelocity += worldspaceMoveInput * accelerationSpeedInAir * Time.deltaTime;
             characterVelocityY = characterVelocity.y;
             characterVelocityY += (gravityDownForce * Time.deltaTime) * -1;

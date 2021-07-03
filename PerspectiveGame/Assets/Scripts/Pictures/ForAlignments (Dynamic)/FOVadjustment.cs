@@ -11,7 +11,7 @@ public class FOVadjustment : MonoBehaviour
     void Start()
     {
         playerCamera = GetComponent<Camera>();
-        
+
     }
 
     // Update is called once per frame
