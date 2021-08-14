@@ -7,9 +7,9 @@ public class PictureManager : MonoBehaviour
 {
     public enum PictureSwitchState
     {
-        PutupNew,
-        Putdown,
-        PutdownPrevious,
+        PutupNew,        //Player is holding up a new picture
+        Putdown,         //Player has chose to stop holding a picture
+        PutdownPrevious //Player is keeping its current picture and swtiching to a new picture
 
     }
 
@@ -22,11 +22,12 @@ public class PictureManager : MonoBehaviour
 
     [Header("For Switching of Picture")]
     public GameObject HoldingPosition;
+    public GameObject FiveSeven_HoldingPosition;
     public GameObject KeepingPosition;
     public float Switchdelay = 1f; // adjust how the speed of the transition
 
     public bool holdpicture = false;
-    private bool Isswitching = false;
+    public bool Isswitching = false;
     private int CurrentPicureIndex = 0;
     private int PreviousPicureIndex = 0;
     
@@ -35,7 +36,9 @@ public class PictureManager : MonoBehaviour
     RaycastHit hit;
     Camera playerCamera;
     PictureSwitchState SwitchState;
+    GameObject targetpositon;
     float switchingStartTIme;
+   
 
 
 
@@ -46,12 +49,13 @@ public class PictureManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-        PickupPicture();
-        if (!Isswitching)
+    {       
+        if (!Isswitching) 
+        { 
             HoldPicture();
             SwitchPictureIndex();
+            //PicturePositioning();
+        }
     }
     private void LateUpdate()
     {
@@ -59,8 +63,8 @@ public class PictureManager : MonoBehaviour
             UpdateSwitchPicture();
     }
 
-    void UpdateSwitchPicture() {
-
+    void UpdateSwitchPicture() //This will proccess the movements of the pictures (From Holding Position to Keeping Position vice versa)
+    {
         GameObject currentpicture = Pictures[CurrentPicureIndex];
         GameObject previouspicture = Pictures[PreviousPicureIndex];
         float switchingTimeFactor = 0f;
@@ -75,6 +79,8 @@ public class PictureManager : MonoBehaviour
         {
             if (SwitchState == PictureSwitchState.Putdown)
             {
+                currentpicture.transform.position = KeepingPosition.transform.position;
+                currentpicture.transform.parent = KeepingPosition.transform;
                 currentpicture.SetActive(false);
                 holdpicture = false;
                 Isswitching = false;
@@ -82,67 +88,84 @@ public class PictureManager : MonoBehaviour
             }
             else if (SwitchState == PictureSwitchState.PutdownPrevious)
             {
+
+                previouspicture.transform.position = KeepingPosition.transform.position;
+                previouspicture.transform.parent = KeepingPosition.transform;
                 previouspicture.SetActive(false);
                 currentpicture.SetActive(true);
-               
+                string Picture_ratio = currentpicture.transform.GetComponent<PictureController>().PictureRatio;
+                if (Picture_ratio == "5x7")
+                    targetpositon = FiveSeven_HoldingPosition;
+                else
+                    targetpositon = HoldingPosition;
+
                 switchingStartTIme = Time.time;
                 SwitchState = PictureSwitchState.PutupNew;
                
             }
             else
             {
+                
+                currentpicture.transform.parent = targetpositon.transform;
+                currentpicture.transform.position = targetpositon.transform.position;
+                currentpicture.transform.parent = targetpositon.transform;
                 holdpicture = true;
                 Isswitching = false;
                 crosshair.SetActive(false);
             }
-                
-            
-                
+                                          
         }
 
         else
         {
             if (SwitchState == PictureSwitchState.Putdown)
-                currentpicture.transform.localPosition = Vector3.Lerp(HoldingPosition.transform.localPosition, KeepingPosition.transform.localPosition, switchingTimeFactor);
+                currentpicture.transform.position = Vector3.Lerp(targetpositon.transform.position, KeepingPosition.transform.position, switchingTimeFactor);
             if (SwitchState == PictureSwitchState.PutdownPrevious)
-                previouspicture.transform.localPosition = Vector3.Lerp(HoldingPosition.transform.localPosition, KeepingPosition.transform.localPosition, switchingTimeFactor);
+                previouspicture.transform.position = Vector3.Lerp(targetpositon.transform.position, KeepingPosition.transform.position, switchingTimeFactor);
             if (SwitchState == PictureSwitchState.PutupNew)
                 {
                 currentpicture.SetActive(true);
-                currentpicture.transform.localPosition = Vector3.Lerp(KeepingPosition.transform.localPosition, HoldingPosition.transform.localPosition, switchingTimeFactor);
+                currentpicture.transform.position = Vector3.Lerp(KeepingPosition.transform.position, targetpositon.transform.position, switchingTimeFactor);
             }
         } 
         
     }
     
-    void PickupPicture()
-    {
-        playerCamera = player.transform.Find("Camera").GetComponent<Camera>();
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, Mathf.Infinity))
-        {
-            if (Input.GetMouseButtonDown(0) &&  hit.collider.gameObject.transform.parent != null) {
-                if ( hit.collider.gameObject.transform.parent.transform.GetComponent<PictureController>() != null && !Pictures.Contains(hit.collider.gameObject.transform.parent.gameObject))
+    public void PickupPicture(GameObject PicutreObject)
+    {       
+                if (!Pictures.Contains(PicutreObject))
                 {
-
-                    GameObject parentObject = hit.collider.gameObject.transform.parent.gameObject;
-                    Pictures.Add(parentObject);
-                    parentObject.transform.parent = Pictureholder.transform;
-                    if(Pictures.Count == 1)
+                    Pictures.Add(PicutreObject);
+                    //The picture object's scale will change when we set its parent. Hence we need to record its original scale beforehand and use it to set the picture object's scale back.
+                    Vector3 originalscale = new Vector3(PicutreObject.transform.localScale.x * (1/player.transform.localScale.x), PicutreObject.transform.localScale.y * (1 / player.transform.localScale.y), PicutreObject.transform.localScale.z * (1 / player.transform.localScale.z));
+                    
+                    if (Pictures.Count == 1) // Player did not have any picture beforehand
                     {
-                        parentObject.transform.localPosition = HoldingPosition.transform.localPosition;
-                        parentObject.transform.localEulerAngles = HoldingPosition.transform.localEulerAngles;
-                        holdpicture = true;
-                        crosshair.SetActive(false); 
+                            string Picture_ratio = PicutreObject.transform.GetComponent<PictureController>().PictureRatio;
+                            if(Picture_ratio == "5x7")
+                                targetpositon = FiveSeven_HoldingPosition;
+                            else
+                                targetpositon = HoldingPosition;
+                            PicutreObject.transform.rotation = targetpositon.transform.rotation;
+                            PicutreObject.transform.parent = targetpositon.transform;
+                            PicutreObject.transform.position = targetpositon.transform.position;
+                            //PicutreObject.transform.localPosition = HoldingPosition.transform.localPosition;
+                            holdpicture = true;
+                            crosshair.SetActive(false); 
                     }
-                    else
+
+                    else // Player had at least 1 picture with him
                     {
-                        parentObject.transform.localPosition = KeepingPosition.transform.localPosition;
-                        parentObject.transform.localEulerAngles = HoldingPosition.transform.localEulerAngles;
-                        parentObject.SetActive(false);
-                    }               
+                            
+                            PicutreObject.transform.position = KeepingPosition.transform.position;
+                            PicutreObject.transform.rotation = KeepingPosition.transform.rotation;
+                            PicutreObject.transform.parent = KeepingPosition.transform;
+                            PicutreObject.SetActive(false);
+                     }
+                    
+                    PicutreObject.transform.localScale = originalscale;  // This is where we use set the picture object back to its original scale.
                 }
-            }
-        }
+        
     }
 
     void HoldPicture() // player can choose whether to hold the picture
@@ -205,5 +228,5 @@ public class PictureManager : MonoBehaviour
             return 1;
         return 0;
     }
-
+   
 }

@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class CreatePicture : MonoBehaviour
 {
-    //FULLSCREEN SCALE OF THE PICTURE IS 0.433F
+    [Header("Only turn on this script to take picture of a specific stage object and create picture object")]
 
-    [Header("Phototaking")]
-    public int Supersize = 2;
-    public int _shotIndex = 0;
-    
 
     [Header("PictureCreation")]
+    public string Actiontype = "none";
     public GameObject Player;
     public Camera playerCamera;
-    public GameObject pictureobj;
-    public GameObject pictureexample;
+    public GameObject PicturePrefab;
+    public GameObject HoldingPosition;
     public List<GameObject> Landmarks = new List<GameObject>();
-    public float targetscale = 0.35f;
-    public float picutrezposition = 0.933f;
-    public float picscale = 0.5f;
-    // 1st try : 1.11f
 
+    //To Check if player has alrd taken a picture
     private bool created = false;
     private int HG_count = 1;
     private string folderPath = "";
@@ -37,21 +31,26 @@ public class CreatePicture : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
             takepic();             
     }
-    private void LateUpdate()                                                                               //Had to create the object in Late Update as screenshot only runs at the end of the update
+    private void LateUpdate() ///Had to create the picture gameobject in LateUpdate as screenshot only runs at the end of the update
     {
         if (System.IO.File.Exists(folderPath+ $"/Screenshot_" +this.gameObject.name + ".png") & created == false) // Ensure the screenshot is created.
         {
-            Debug.Log("create");
 
-            GameObject newpic = Instantiate(pictureobj, pictureexample.transform.position, pictureexample.transform.rotation);
-            newpic.transform.parent = playerCamera.transform;
-            newpic.transform.localScale = new Vector3(picscale, picscale, picscale);            
+            GameObject newpic = Instantiate(PicturePrefab, HoldingPosition.transform.position, HoldingPosition.transform.rotation);
+
             newpic.GetComponent<PictureController>().TargetObject = this.gameObject;
-            newpic.GetComponent<PictureController>().TargetPosition = this.gameObject.transform.position;
-            newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.rotation;
+            newpic.GetComponent<PictureController>().Actiontype = Actiontype;
+            newpic.GetComponent<PictureController>().player = Player;
 
+            if(Actiontype == "create")
+            {
+                newpic.GetComponent<PictureController>().TargetPosition = this.gameObject.transform.position;
+                newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.rotation;
+            }
+            else if(Actiontype == "rotate")
+                newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.localRotation;
 
-                foreach (GameObject LM in Landmarks)
+            foreach (GameObject LM in Landmarks)
             {
                 if (LM.GetComponent("AssignHolograms") as AssignHolograms != null)
                 {

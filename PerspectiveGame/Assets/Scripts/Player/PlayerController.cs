@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,7 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpSpeed = 30f;
     public float gravityDownForce = 60f;
     private float cameraVerticalAngle;
+    public GameObject picobj;
     public Camera playerCamera;
+    public PictureManager PicManager;
     //private CameraFov cameraFov;
 
     public bool isGrounded { get; private set; }
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         playerCamera = transform.Find("Camera").GetComponent<Camera>();
+        PicManager = transform.GetComponent<PictureManager>();
         //cameraFov = playerCamera.GetComponent<CameraFov>();
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -63,6 +67,7 @@ public class PlayerController : MonoBehaviour
         //UpdateCharacterHeight(false);
         CharacterLook();
         CharacterMovement();
+        GetObjectInteractionInput();
     }
 
     private void CharacterLook()
@@ -70,15 +75,14 @@ public class PlayerController : MonoBehaviour
         float lookX = Input.GetAxisRaw("Mouse X");
         float lookY = Input.GetAxisRaw("Mouse Y");
         // Rotate the player transform left right      
-        transform.Rotate(new Vector3(0f, lookX * mouseSensitivity, 0f), Space.Self); // Needs to rotate the player transform so that the player is actually facing the same direction as the camera
-
-        // Get the vertical angle of the camera based on the mouseSensitivity
+        transform.Rotate(new Vector3(0f,lookX * mouseSensitivity, 0f), Space.Self);
         cameraVerticalAngle += lookY * mouseSensitivity;
 
         cameraVerticalAngle = Mathf.Clamp(cameraVerticalAngle, -89f, 89f); // Limit the camera's vertical angle. Prevent the player from turning 180 degree
 
         // Change the vertical angle of the camera
         playerCamera.transform.localEulerAngles = new Vector3(cameraVerticalAngle, 0, 0); // We only want the camera to rotate up/down when the player looks up/down, not the whole player object
+
     }
 
     private void CharacterMovement()
@@ -167,5 +171,27 @@ public class PlayerController : MonoBehaviour
         // constrain move input to a maximum magnitude of 1, otherwise diagonal movement might exceed the max move speed defined
         move = Vector3.ClampMagnitude(move, 1);
         return move;
+    }
+
+    public void GetObjectInteractionInput()
+    {
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, Mathf.Infinity))
+        {
+            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject != null)
+            {
+                
+                if (hit.collider.gameObject.transform.parent.transform.GetComponent<PictureController>() != null) //If the object that the player is interacting is a picture
+                {
+                    Debug.Log("pic");
+                    GameObject parentObject = hit.collider.gameObject.transform.parent.gameObject;
+                    PicManager.PickupPicture(parentObject);
+                }
+                else if (hit.collider.gameObject.GetComponent<ObjectInteractions>() != null)   // If the object can be interacted and is not a picture (e.g. door)
+                {
+                    GameObject InteractionObject = hit.collider.gameObject;
+                    InteractionObject.GetComponent<ObjectInteractions>().ApplyInteraction();
+                }
+            }
+        }
     }
 }
