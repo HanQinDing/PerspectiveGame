@@ -8,157 +8,187 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bedframe
-    second: {fileID: 2100000, guid: 44d7418da1a5fc042b36568d0d574003, type: 2}
+    second: {fileID: 2100000, guid: 89c3e7aa81dd6fa4c8f994a2aaf47f3b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Ceiling Light
-    second: {fileID: 2100000, guid: 231a838b62fb28a4c8ad7ab868cec0a4, type: 2}
+      name: Corridor_BlackOuterDoor
+    second: {fileID: 2100000, guid: 3f48dec4f7afa124c83c29e0dfff7002, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CorridorWall
-    second: {fileID: 2100000, guid: e34d92c2e8c7d2846996a755e3d23880, type: 2}
+      name: Corridor_Ceiling
+    second: {fileID: 2100000, guid: eee2dfcfec3b0884c9f7e204fc25db3e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cup
-    second: {fileID: 2100000, guid: 9cabaa501e47bb94dba0cdf10c14e841, type: 2}
+      name: Corridor_DoorKnob
+    second: {fileID: 2100000, guid: 88af4f3ab052af648a0d92ade51fd819, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cupboardknob
-    second: {fileID: 2100000, guid: 198fc57bde560fb43a630ee91509536c, type: 2}
+      name: Corridor_DoorSignPlate
+    second: {fileID: 2100000, guid: b1f11f97669a26547825b772588cc4bd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Curb
-    second: {fileID: 2100000, guid: 396a4faf042bfcf43be717f1cba3a15c, type: 2}
+      name: Corridor_DoorSignText
+    second: {fileID: 2100000, guid: fb0425fb48dfecc44b69793414a68a7f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Desk
-    second: {fileID: 2100000, guid: 0cbba08d0ec394044a2e1b5882fef7ca, type: 2}
+      name: Corridor_ExitDoor
+    second: {fileID: 2100000, guid: 730199376e62d5d4795b717493dbdb3c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Door
-    second: {fileID: 2100000, guid: ca4c8e92c49ce9445afc42616cbf2218, type: 2}
+      name: Corridor_ExtraCurb
+    second: {fileID: 2100000, guid: 16617176bea6e9d40877fc7b410952a4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DoorKnob1
-    second: {fileID: 2100000, guid: 12abb0fa2a506fd4599fbdde9dbcd3bb, type: 2}
+      name: Corridor_Floor
+    second: {fileID: 2100000, guid: c656867c8491e074f8821a7cdd39aeb1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DoorKnob2
-    second: {fileID: 2100000, guid: e6f20f5952af954469ebebbfd643c6cf, type: 2}
+      name: Corridor_Hinge
+    second: {fileID: 2100000, guid: f847ee032fa4113408d18b2b305ef72f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor_Light
+    second: {fileID: 2100000, guid: df2c22f5c259f3c4187168c684b665f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor_Wall
+    second: {fileID: 2100000, guid: 22d79ae9cd2f95b42afa3068ae5d4f87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor_WoodenCurb
+    second: {fileID: 2100000, guid: a9ccce89cd4b8974195197159f8c3f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor_WoodenInnerDoor
+    second: {fileID: 2100000, guid: 3ce0c23cd88a51844a0e31812e47378f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cupboard
+    second: {fileID: 2100000, guid: 9342849f8021c5e4eb815847c385ac77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CupboardKnob
+    second: {fileID: 2100000, guid: 60aee22c1f1fab54b9f644854bd3c302, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EntanceSign
-    second: {fileID: 2100000, guid: 345d6a80c02f65542a7222de08aa3a38, type: 2}
+    second: {fileID: 2100000, guid: c34da33386cbc5740b07b64ee0a65d0a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ExitDoor
-    second: {fileID: 2100000, guid: 6eaac48c699706f4d846f6f04763eeea, type: 2}
+      name: Entrance_DoorKnob
+    second: {fileID: 2100000, guid: b0054bfc1c6211943bd07a7ddfc8ce0e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Floor
-    second: {fileID: 2100000, guid: 4815baf3535c5c943bc1a1b038e83c87, type: 2}
+      name: Entrance_InnerDoor
+    second: {fileID: 2100000, guid: 06eecaea6d4d77b47871e66a669d754d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hinge
-    second: {fileID: 2100000, guid: 90d622086d2266140ba8c6c240ec42b0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light
-    second: {fileID: 2100000, guid: 87c609cacc8027643aaf872370f8dd38, type: 2}
+      name: ExitSign
+    second: {fileID: 2100000, guid: 7cb50a949d142874c91b1ff914b9da45, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Locker
-    second: {fileID: 2100000, guid: fda72db49b74dc34f9c96f801b92f140, type: 2}
+    second: {fileID: 2100000, guid: c431a890e8c01384780d609d38ad06cd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 2fe777bf0e692284c9b9e09455fa03fe, type: 2}
+      name: MainRoom_Floor
+    second: {fileID: 2100000, guid: 17aa384a5c8de104c9f9ebcf89a4ba4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainRoom_GreenCup
+    second: {fileID: 2100000, guid: b1a978bbdf7179e419230814a1a5cd64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainRoom_Light
+    second: {fileID: 2100000, guid: 0ea00ebc7c5add3439ecd55ed40a917c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainRoom_Wall
+    second: {fileID: 2100000, guid: 35963504671483741ac5d588ee1441d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainRoon_Curb
+    second: {fileID: 2100000, guid: 186fbec15c56e694390fc3364d886c64, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mattress
-    second: {fileID: 2100000, guid: 35851c6624ce02849ac2dab3046a1256, type: 2}
+    second: {fileID: 2100000, guid: 8534c701a39da34439fabbde897dd934, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: OuterDoor
-    second: {fileID: 2100000, guid: 129747090cd9f534696fd5761ac18ded, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: e9c8add33706d194f92fcd5a88044f8e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pillow
-    second: {fileID: 2100000, guid: 5e7a1d613a032414792aa25535deadaf, type: 2}
+    second: {fileID: 2100000, guid: 747a7aad52f0dba4581858af8adc96c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Room_Wall
-    second: {fileID: 2100000, guid: 24a4222bf546a5245b8abdc25f2645e7, type: 2}
+      name: Room1_CeilingLight
+    second: {fileID: 2100000, guid: 9ed5a2ee3612f3946b86eb664338f1c6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tablesurface
-    second: {fileID: 2100000, guid: 9717db05c28771045865d05f7360d758, type: 2}
+      name: Room1_DarkBlueWall
+    second: {fileID: 2100000, guid: a836a3c28d942194fa408a356d228020, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Text
-    second: {fileID: 2100000, guid: 58bfdd26b8983e8449cb58d250888959, type: 2}
+      name: Room1_WhiteColor
+    second: {fileID: 2100000, guid: e56f6b89db75fab4e81cfac073e78713, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: corridorwall.001
-    second: {fileID: 2100000, guid: 5c710586321e9b44abda3fb9396b9194, type: 2}
+      name: Room1_WoodenFloor
+    second: {fileID: 2100000, guid: 70a4d535b7e6dc745a99f937363b1daf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: entrance
-    second: {fileID: 2100000, guid: 5a038b34bcb19d3479042a32f3a1e346, type: 2}
+      name: Sign_WhiteExterior
+    second: {fileID: 2100000, guid: ddac8881ce7bb624dbef19385435cb7f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: exit.001
-    second: {fileID: 2100000, guid: bd2a8a5021491144abef474867a78b20, type: 2}
+      name: TableLamp_Stand
+    second: {fileID: 2100000, guid: 8bcf153730daaf74597a7613458c6be6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: exit_exterior
-    second: {fileID: 2100000, guid: 5af9df256e0b3b842aedf22b5cac63f4, type: 2}
+      name: Table_Leg
+    second: {fileID: 2100000, guid: d12be1fb7e7801547aeddd3259312c77, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: extrawall
-    second: {fileID: 2100000, guid: 68fe26ea01f292f43bce272b93904928, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: roomCurb
-    second: {fileID: 2100000, guid: 02ed5ffcbacd41e488ca7d4ca4c30bc1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: roomfloor
-    second: {fileID: 2100000, guid: 49c74bd171fd9d94ea214714cabfeb1c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tableleg
-    second: {fileID: 2100000, guid: 1179ab596edc81949af8a65663ce1ccf, type: 2}
+      name: Table_Surface
+    second: {fileID: 2100000, guid: e61fc16766cffe740b40d3ef2ac9c73d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -211,16 +241,16 @@ ModelImporter:
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 1
-    secondaryUVAreaDistortion: 1
-    secondaryUVHardAngle: 60
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 45
+    normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4

@@ -19,14 +19,17 @@ public class FOVadjustment : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            if (reduced) {
-                playerCamera.fieldOfView = playerCamera.fieldOfView / targetscale ;
-            reduced = false;
-            }
-            else { 
-                playerCamera.fieldOfView = targetscale * playerCamera.fieldOfView;
-                reduced = true;
-            }
+            /*
+             if (reduced) {
+                 playerCamera.fieldOfView = playerCamera.fieldOfView / targetscale ;
+             reduced = false;
+             }
+             else { 
+                 playerCamera.fieldOfView = targetscale * playerCamera.fieldOfView;
+                 reduced = true;
+             }
+             */
+            playerCamera.transform.localPosition = new Vector3(playerCamera.transform.localPosition.x, playerCamera.transform.localPosition.y, 9.8f);
         }
     }
 }

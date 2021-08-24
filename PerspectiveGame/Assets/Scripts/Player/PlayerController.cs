@@ -68,6 +68,10 @@ public class PlayerController : MonoBehaviour
         CharacterLook();
         CharacterMovement();
         GetObjectInteractionInput();
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ScreenshotHandler.TakeScreenshot_Static(300, 300);
+        }
     }
 
     private void CharacterLook()

@@ -22,6 +22,6 @@ public class ObjectInteractions : MonoBehaviour
     public void ApplyInteraction()
     {
         if (type == "rotate")
-            this.transform.rotation = TargetRotation;
+            this.transform.localRotation = TargetRotation;
     }
 }

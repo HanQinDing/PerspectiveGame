@@ -31,7 +31,7 @@ public class PictureController : MonoBehaviour
     void Update()
     {
 
-
+        /*
         if (Checkalignment())
         {
             if (Actiontype == "create")
@@ -44,9 +44,12 @@ public class PictureController : MonoBehaviour
             PictureManager PM = player.transform.GetComponent<PictureManager>();
             PM.Pictures.Remove(this.gameObject);
             PM.holdpicture = false;
-            Destroy(this.gameObject);   
             crosshair.SetActive(true);
+            Debug.Log("active");
+            Destroy(this.gameObject);   
+            
         }
+        */
 
 
 
