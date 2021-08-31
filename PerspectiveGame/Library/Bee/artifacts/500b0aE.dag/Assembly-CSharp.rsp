@@ -335,6 +335,8 @@
 "Assets/Scripts/Tools/Interaction.cs"
 "Assets/Scripts/Tools/ObjectInteractions.cs"
 "Assets/Scripts/Tools/Positioning.cs"
+"Assets/Scripts/Tools/ScreenAdjustment.cs"
+"Assets/Scripts/Tools/ScreenshotController.cs"
 -langversion:8.0
 
 /deterministic

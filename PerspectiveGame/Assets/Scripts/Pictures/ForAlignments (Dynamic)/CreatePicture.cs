@@ -33,9 +33,9 @@ public class CreatePicture : MonoBehaviour
     }
     private void LateUpdate() ///Had to create the picture gameobject in LateUpdate as screenshot only runs at the end of the update
     {
-        if (System.IO.File.Exists(folderPath+ $"/Screenshot_" +this.gameObject.name + ".png") & created == false) // Ensure the screenshot is created.
+        if (System.IO.File.Exists(folderPath+ $"/Screenshot_" +this.gameObject.name + ".png") && created == false) // Ensure the screenshot is created.
         {
-
+            Debug.Log(created);
             GameObject newpic = Instantiate(PicturePrefab, HoldingPosition.transform.position, HoldingPosition.transform.rotation);
 
             newpic.GetComponent<PictureController>().TargetObject = this.gameObject;
@@ -65,6 +65,7 @@ public class CreatePicture : MonoBehaviour
 
             }
             created = true;
+           
         }
         
       
@@ -73,8 +74,6 @@ public class CreatePicture : MonoBehaviour
     {      
         if (!System.IO.Directory.Exists(folderPath))
             System.IO.Directory.CreateDirectory(folderPath);
-        var screenshotName ="Screenshot_" +this.gameObject.name + ".png";
-        ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(folderPath, screenshotName));
-        
+        playerCamera.GetComponent<ScreenshotController>().TakeScreenshot(this.gameObject.name);
     }
 }
