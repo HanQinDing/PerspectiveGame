@@ -11,10 +11,8 @@ public class PictureController : MonoBehaviour
     
     public GameObject TargetObject;
     public GameObject crosshair;
-    public GameObject player;
     public Vector3 TargetPosition;
     public Quaternion TargetRotation;
-    public Camera playerCamera;
     public string Actiontype = "none"; // to indicate what action to take when picture is aligned (e.g. create/rotate the targetobject)
     public string PictureRatio = "none"; // to indicate what action to take when picture is aligned (e.g. create/rotate the targetobject)
     public float leeway = 1f; // the amount of leeway given to the player. the picture can be slightly off its target location to make it easier for player 

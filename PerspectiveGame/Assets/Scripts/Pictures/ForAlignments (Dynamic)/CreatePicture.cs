@@ -40,7 +40,7 @@ public class CreatePicture : MonoBehaviour
 
             newpic.GetComponent<PictureController>().TargetObject = this.gameObject;
             newpic.GetComponent<PictureController>().Actiontype = Actiontype;
-            newpic.GetComponent<PictureController>().player = Player;
+
 
             if(Actiontype == "create")
             {

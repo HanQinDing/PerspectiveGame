@@ -324,18 +324,12 @@
 "Assets/Scripts/Pictures/ForAlignments (Dynamic)/AssignHolograms.cs"
 "Assets/Scripts/Pictures/ForAlignments (Dynamic)/AssignLandmark.cs"
 "Assets/Scripts/Pictures/ForAlignments (Dynamic)/CreatePicture.cs"
-"Assets/Scripts/Pictures/ForAlignments (Dynamic)/FOVadjustment.cs"
 "Assets/Scripts/Pictures/ForAlignments (Dynamic)/PictureController.cs"
-"Assets/Scripts/Pictures/ForAlignments (Hardcode)/CoordinateDistance.cs"
-"Assets/Scripts/Pictures/ForAlignments (Hardcode)/PictureAlignment.cs"
-"Assets/Scripts/Pictures/ForAlignments (Hardcode)/Screenshot.cs"
 "Assets/Scripts/Player/PicController.cs"
 "Assets/Scripts/Player/PictureManager.cs"
 "Assets/Scripts/Player/PlayerController.cs"
-"Assets/Scripts/Tools/Interaction.cs"
 "Assets/Scripts/Tools/ObjectInteractions.cs"
 "Assets/Scripts/Tools/Positioning.cs"
-"Assets/Scripts/Tools/ScreenAdjustment.cs"
 "Assets/Scripts/Tools/ScreenshotController.cs"
 -langversion:8.0
 
