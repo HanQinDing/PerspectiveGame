@@ -20,6 +20,7 @@ public class PictureManager : MonoBehaviour
     public GameObject Pictureholder;
     public GameObject crosshair;
 
+
     [Header("For Switching of Picture")]
     public GameObject HoldingPosition;
     public GameObject FiveSeven_HoldingPosition;
@@ -132,7 +133,8 @@ public class PictureManager : MonoBehaviour
     }
     
     public void PickupPicture(GameObject PicutreObject)
-    {       
+    {           
+
                 if (!Pictures.Contains(PicutreObject))
                 {
                     Pictures.Add(PicutreObject);
@@ -165,7 +167,6 @@ public class PictureManager : MonoBehaviour
                     
                     PicutreObject.transform.localScale = originalscale;  // This is where we use set the picture object back to its original scale.
                 }
-        
     }
 
     void HoldPicture() // player can choose whether to hold the picture
