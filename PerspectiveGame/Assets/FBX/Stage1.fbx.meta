@@ -17,6 +17,41 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 4d2ef96eb4235db4a8302358efaedd87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor1Redcarpet
+    second: {fileID: 2100000, guid: 1b19cd5a6b3291242888072740467902, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2FakeDoor
+    second: {fileID: 2100000, guid: c6455fe7fa7a87f498252cdc51fcd942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2Illusion
+    second: {fileID: 2100000, guid: 260fb07431a276943bd98dd9673381a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2RedCarpet
+    second: {fileID: 2100000, guid: 59dde0b7374bc744e9bcf871c8b773be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2brownFloor
+    second: {fileID: 2100000, guid: bbe13bdd2abdbd94bac9c61a1fdf0cde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridorwall
+    second: {fileID: 2100000, guid: 9e0dec3c74d4c554c8dfc90c8d85f0cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Cupboard
     second: {fileID: 2100000, guid: 28df1184151adb0459c3468ee7414ac1, type: 2}
   - first:
@@ -24,6 +59,26 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: CupboardKnob
     second: {fileID: 2100000, guid: 7d16db2b33eea9743885d5d25927683b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escher's_Relativity
+    second: {fileID: 2100000, guid: 20dba0d4df3860148b135446e183e009, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FakeCurb
+    second: {fileID: 2100000, guid: d68cb05fa009d0d48886e0d14f096f31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightHanger
+    second: {fileID: 2100000, guid: 5fafbd31091a9a444a5cbb42f32ab1af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lightbrown
+    second: {fileID: 2100000, guid: 372147ff24828ab41a58cf13bdccd6a4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -42,8 +97,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MainRoom_Light.001
+    second: {fileID: 2100000, guid: cc6416d9f2770784394bc2185a6e4fa7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 00d448e4deb9e9c44bec8f9b2a5e894d, type: 2}
+    second: {fileID: 2100000, guid: cb538816169b2a94ba6c0d405fd313b4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -62,13 +122,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Room1Floor
-    second: {fileID: 2100000, guid: f3b512adce35ad245bdde59b3d356015, type: 2}
+      name: Red Carpet.002
+    second: {fileID: 2100000, guid: ea2e7144610409f44921368810f7b7ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Room1_Wall
-    second: {fileID: 2100000, guid: d2c0f783311d2a5498020d93b7206146, type: 2}
+      name: Robert Gonsalves
+    second: {fileID: 2100000, guid: 437e16a3cb91652419c03c0fa9694559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room1BooleanWallCurb
+    second: {fileID: 2100000, guid: fb31207326e8df8439e1d7f8f788a09a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room1Curb
+    second: {fileID: 2100000, guid: 205758bd7e3355f4ca8810afa8ce45cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -97,13 +167,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: WoodFloor
+    second: {fileID: 2100000, guid: 349559c5d204d1a4cbf19d362e34f51d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wooden
     second: {fileID: 2100000, guid: 24fa1d1ab1faa0e49842a9dc162a96b6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WoodenCurb
-    second: {fileID: 2100000, guid: 96e78af6e8d7742428924f3512536331, type: 2}
+      name: holbeinAmbassadors
+    second: {fileID: 2100000, guid: 2b1e4c39c84797540a46e26b8b5c1c27, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
