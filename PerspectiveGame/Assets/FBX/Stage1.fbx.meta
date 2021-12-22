@@ -17,18 +17,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Brown
-    second: {fileID: 2100000, guid: 4d2ef96eb4235db4a8302358efaedd87, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Carpet
     second: {fileID: 2100000, guid: cbe6668c6ba5e12418f6a288b5ea9897, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Carpet 01
-    second: {fileID: 2100000, guid: b81d04d644e14cc479681146571794ee, type: 2}
+      name: Corridor1CeilingLight
+    second: {fileID: 2100000, guid: 61ef6f32b1258604da894e80b9b968ea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -47,38 +42,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Corridor2FakeDoor
-    second: {fileID: 2100000, guid: c6455fe7fa7a87f498252cdc51fcd942, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Corridor2Illusion
     second: {fileID: 2100000, guid: 260fb07431a276943bd98dd9673381a9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Corridor2RedCarpet
-    second: {fileID: 2100000, guid: 59dde0b7374bc744e9bcf871c8b773be, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corridor2WoodenCurb
-    second: {fileID: 2100000, guid: efbc2bba6b448d245909bcc515546992, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corridor2brownFloor
-    second: {fileID: 2100000, guid: bbe13bdd2abdbd94bac9c61a1fdf0cde, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: CorridorFakeExit
     second: {fileID: 2100000, guid: 621a5095235d5904da76fa8d02fdf5c9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corridorwall
-    second: {fileID: 2100000, guid: 9e0dec3c74d4c554c8dfc90c8d85f0cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -94,21 +64,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Escher's_Relativity
     second: {fileID: 2100000, guid: 20dba0d4df3860148b135446e183e009, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ExitGreen
-    second: {fileID: 2100000, guid: 23bf311545b04c4498b38b93d4a1d3a0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ExitWhite
-    second: {fileID: 2100000, guid: 838c3dc4376cc2344ad4c137dd8fcf4b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FakeCurb
-    second: {fileID: 2100000, guid: d68cb05fa009d0d48886e0d14f096f31, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -137,21 +92,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: MainRoom_Light
-    second: {fileID: 2100000, guid: 9a436e3c422fad044a2e75a2f3bdc6f0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MainRoom_Light.001
-    second: {fileID: 2100000, guid: cc6416d9f2770784394bc2185a6e4fa7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: cb538816169b2a94ba6c0d405fd313b4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Mattress
     second: {fileID: 2100000, guid: a9be490f609b1e84bb93c0835e0fd399, type: 2}
   - first:
@@ -159,16 +99,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: 16abdad69009c3e41a95578d1a315680, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal.001
-    second: {fileID: 2100000, guid: 49f03387dd63c894988ef98208381320, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Oleg
-    second: {fileID: 2100000, guid: 8fdcfda65f26a2b4b9e44f937b2edb52, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -184,11 +114,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Red
     second: {fileID: 2100000, guid: 41a3c20bbabc1ba44812151c1976982e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red Carpet.002
-    second: {fileID: 2100000, guid: ea2e7144610409f44921368810f7b7ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -213,12 +138,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StartingRoomFloor
-    second: {fileID: 2100000, guid: df7c4875bbe4c674bae6682966820a11, type: 2}
+    second: {fileID: 2100000, guid: b3b01f64114cc8d4f98572f78dbf90ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StartingRoom_Curb
-    second: {fileID: 2100000, guid: 680c0003bfe91294094f39b7aed4ea1f, type: 2}
+    second: {fileID: 2100000, guid: e3a012cb10e35c94ea221764888b4546, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -316,13 +241,13 @@ ModelImporter:
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
-    secondaryUVAngleDistortion: 1
-    secondaryUVAreaDistortion: 1
-    secondaryUVHardAngle: 60
-    secondaryUVMarginMethod: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
-    secondaryUVPackMargin: 16
+    secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
