@@ -27,6 +27,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Corridor1NormalLight
+    second: {fileID: 2100000, guid: 5d71eb61834728c4d931256110d76384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Corridor1Redcarpet
     second: {fileID: 2100000, guid: 1b19cd5a6b3291242888072740467902, type: 2}
   - first:
@@ -132,11 +137,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: RoomWallCurb
-    second: {fileID: 2100000, guid: 2bdc0da59c45b2e44a16cc6742003715, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: StartingRoomFloor
     second: {fileID: 2100000, guid: b3b01f64114cc8d4f98572f78dbf90ba, type: 2}
   - first:
@@ -144,6 +144,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: StartingRoom_Curb
     second: {fileID: 2100000, guid: e3a012cb10e35c94ea221764888b4546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StartingRoom_Light
+    second: {fileID: 2100000, guid: b31aed32dae81c34ea20582d074e2a17, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

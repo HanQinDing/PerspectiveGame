@@ -44,6 +44,7 @@ public class PictureController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (PictureType == "Dynamic")
         {
             Checkalignment();
@@ -68,7 +69,7 @@ public class PictureController : MonoBehaviour
             
         }
         
-
+        */
 
 
 
