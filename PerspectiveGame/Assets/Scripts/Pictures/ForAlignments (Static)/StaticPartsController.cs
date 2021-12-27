@@ -21,6 +21,7 @@ public class StaticPartsController : MonoBehaviour
     {
         foreach (GameObject child in parts)
         {
+            child.GetComponent<PartController>().CheckifInPlace(true, true);
             if (!child.GetComponent<PartController>().inplace)
                 return false;
         }

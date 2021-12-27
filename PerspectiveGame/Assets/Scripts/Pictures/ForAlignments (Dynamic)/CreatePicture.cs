@@ -10,7 +10,7 @@ public class CreatePicture : MonoBehaviour
     [Header("PictureCreation")]
     public float S_width = 5;
     public float S_Height = 7;
-    public float scale;
+    public float scale = 1;
     public GameObject Player;
     public Camera playerCamera;
     public GameObject PicturePrefab;
@@ -26,7 +26,15 @@ public class CreatePicture : MonoBehaviour
     [Header("Static")]
     public GameObject StaticReferenceObject;
 
+
+
     //To Check if player has alrd taken a picture
+    public List<GameObject> ObjectstoCreate = new List<GameObject>();
+    public List<GameObject> ObjectstoDestroy = new List<GameObject>();
+    public bool CreateSelf = true;
+    public bool destroy = false;
+
+    public GameObject ObJ_To_Destroy;
     private bool created = false;
     private string folderPath = "";
     private GameObject pic;
@@ -56,12 +64,25 @@ public class CreatePicture : MonoBehaviour
 
             if (Actiontype == "create")
             {
-                newpic.GetComponent<PictureController>().TargetPosition = this.gameObject.transform.position;
-                newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.rotation;
+                if (CreateSelf)
+                    ObjectstoCreate.Add(this.gameObject);
+                foreach (GameObject GO in ObjectstoCreate)
+                {
+                    newpic.GetComponent<PictureController>().ObjectstoCreate.Add(GO.name);
+                    newpic.GetComponent<PictureController>().ObjectstoCreate_Position.Add(GO.transform.position);
+                    newpic.GetComponent<PictureController>().ObjectstoCreate_Rotation.Add(GO.transform.rotation);
+                }
             }
             else if(Actiontype == "rotate")
                 newpic.GetComponent<PictureController>().TargetRotation = this.gameObject.transform.localRotation;
 
+            if (destroy)
+            {
+                foreach (GameObject D in ObjectstoDestroy)
+                {
+                    newpic.GetComponent<PictureController>().ObjectstoDestroy.Add(D.name);
+                }
+            }
             if(Picturetype == "Dynamic")
             {
                 newpic.name = "Dynamic_" + this.gameObject.name;
@@ -80,8 +101,6 @@ public class CreatePicture : MonoBehaviour
             else if(Picturetype== "static")
             {
                 newpic.name = "Static_" + this.gameObject.name;
-                Destroy(newpic.transform.Find("Plane").gameObject);
-                Destroy(newpic.transform.Find("Area").gameObject);
                 GameObject ReferenceObj = Instantiate(StaticReferenceObject, HoldingPosition.transform.position, HoldingPosition.transform.rotation);
                 ReferenceObj.transform.parent = newpic.transform;
                 newpic.GetComponent<PictureController>().StaticPosition = HoldingPosition.transform.position;
@@ -91,6 +110,7 @@ public class CreatePicture : MonoBehaviour
                 StaticPartController.transform.parent = newpic.transform;
                 StaticPartController.transform.position = ReferenceObj.transform.position;
                 StaticPartController.AddComponent<StaticPartsController>();
+                playerCamera.transform.Find("PicHandler").transform.Find("5x7Reference").transform.GetComponent<StaticReferenceController>().StaticPictures.Add(ReferenceObj);
             }
             created = true;
            

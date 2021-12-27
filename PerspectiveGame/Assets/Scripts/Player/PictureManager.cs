@@ -85,7 +85,7 @@ public class PictureManager : MonoBehaviour
                 currentpicture.SetActive(false);
                 holdpicture = false;
                 Isswitching = false;
-                crosshair.SetActive(true);
+                //crosshair.SetActive(true);
             }
             else if (SwitchState == PictureSwitchState.PutdownPrevious)
             {
@@ -112,7 +112,7 @@ public class PictureManager : MonoBehaviour
                 currentpicture.transform.parent = targetpositon.transform;
                 holdpicture = true;
                 Isswitching = false;
-                crosshair.SetActive(false);
+                //crosshair.SetActive(false);
             }
                                           
         }
@@ -153,7 +153,7 @@ public class PictureManager : MonoBehaviour
                             PicutreObject.transform.position = targetpositon.transform.position;
                             //PicutreObject.transform.localPosition = HoldingPosition.transform.localPosition;
                             holdpicture = true;
-                            crosshair.SetActive(false); 
+                            //crosshair.SetActive(false); 
                     }
 
                     else // Player had at least 1 picture with him

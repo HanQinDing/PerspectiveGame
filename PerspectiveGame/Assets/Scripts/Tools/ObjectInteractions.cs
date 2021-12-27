@@ -6,8 +6,8 @@ public class ObjectInteractions : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("Interaction")]
-    public string RepitionAmt = "1";
-    public bool Activatable;
+    public bool Repeat = false;
+    public bool Activatable = true;
 
     [Header("Rotate")]
     public Vector3 RotateDirection;
@@ -48,7 +48,7 @@ public class ObjectInteractions : MonoBehaviour
         }
         if (this.gameObject.GetComponent<PartController>())
             this.gameObject.GetComponent<PartController>().CheckifInPlace(Move,Rotate);
-        if(RepitionAmt == "1")
+        if(Repeat != true)
             {
                 Activatable = false;
             }

@@ -11,6 +11,11 @@ public class PictureController : MonoBehaviour
     [Header("MainAttributes")]
     public GameObject player;
     public GameObject TargetObject;
+    public GameObject ParentObject;
+    public List<string> ObjectstoCreate = new List<string>();
+    public List<string> ObjectstoDestroy = new List<string>();
+    public List<Vector3> ObjectstoCreate_Position = new List<Vector3>();
+    public List<Quaternion> ObjectstoCreate_Rotation = new List<Quaternion>();
 
     public Vector3 TargetPosition;
     public Quaternion TargetRotation;
@@ -19,6 +24,9 @@ public class PictureController : MonoBehaviour
     public string PictureType = "static";
     public float leeway = 1f;               // the amount of leeway given to the player. the picture can be slightly off its target location to make it easier for player 
     public bool aligned = false;
+    public bool destroy = false;
+
+
 
     [Header("Static")]
     public Vector3 PlayerTargetPosition;
@@ -44,7 +52,8 @@ public class PictureController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
+        
         if (PictureType == "Dynamic")
         {
             Checkalignment();
@@ -53,10 +62,25 @@ public class PictureController : MonoBehaviour
         {
            // Debug.Log("Aligned");
             if (Actiontype == "create")
-                Instantiate(TargetObject, TargetPosition, TargetRotation);
+            {
+                foreach (string GO in ObjectstoCreate)
+                {
+                    GameObject newObject = ParentObject.transform.Find(GO).gameObject;
+                    newObject.SetActive(true);
+                }
+            }
+                
             else if (Actiontype == "rotate") 
                 TargetObject.transform.localRotation = TargetRotation;
 
+            if (destroy)
+            {
+                foreach (string d in ObjectstoDestroy)
+                {
+                    Destroy(ParentObject.transform.Find(d).gameObject);
+                }
+            }
+               
             PictureManager PM = player.transform.GetComponent<PictureManager>();
             PM.Pictures.Remove(this.gameObject);
             if(PictureType == "Dynamic")
@@ -69,8 +93,7 @@ public class PictureController : MonoBehaviour
             
         }
         
-        */
-
+        
 
 
 

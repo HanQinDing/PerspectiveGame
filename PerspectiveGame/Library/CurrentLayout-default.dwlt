@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 877, y: 492}
   m_MaxSize: {x: 16002, y: 14042}
   vertical: 0
-  controlID: 62
+  controlID: 64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 601, y: 492}
   m_MaxSize: {x: 12001, y: 14042}
   vertical: 1
-  controlID: 122
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 601, y: 221}
   m_MaxSize: {x: 12001, y: 4021}
   vertical: 0
-  controlID: 123
+  controlID: 75
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,18 +378,18 @@ MonoBehaviour:
       y: 21
       width: 439
       height: 458
-    m_Scale: {x: 1.6101567, y: 1.6101567}
-    m_Translation: {x: 115.49216, y: 229}
+    m_Scale: {x: 1.1905129, y: 1.1905129}
+    m_Translation: {x: 177.68242, y: 229}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -71.72728
-      y: -142.22218
-      width: 272.6443
-      height: 284.44437
+      x: -149.24863
+      y: -192.35406
+      width: 368.74863
+      height: 384.70813
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 548.75, y: 598.75}
@@ -427,9 +427,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 52fbffff
+      m_SelectedIDs: 9ef9ffff96f9ffff8ef9ffff86f9ffff7ef9ffff76f9ffff6ef9ffff
+      m_LastClickedID: -1682
+      m_ExpandedIDs: 20ecffffb6f9fffff2f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1442517, y: -1.3115839, z: 3.4813566}
+    m_Target: {x: -13.625097, y: 1.0884109, z: 0.7510872}
     speed: 2
-    m_Value: {x: -1.1442517, y: -1.3115839, z: 3.4813566}
+    m_Value: {x: -13.625094, y: 1.08841, z: 0.7510871}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -539,13 +539,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.016573036, y: -0.8236229, z: 0.02391322, w: -0.5665085}
+    m_Target: {x: -0.014681278, y: -0.9625351, z: 0.052561637, w: -0.26587105}
     speed: 2
-    m_Value: {x: 0.016573036, y: 0.8236229, z: -0.02391322, w: 0.5665085}
+    m_Value: {x: -0.014128154, y: -0.96333903, z: 0.051156797, w: -0.2629854}
   m_Size:
-    m_Target: 1.0704553
+    m_Target: 10.589256
     speed: 2
-    m_Value: 1.0704553
+    m_Value: 11.088226
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -635,22 +635,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/FBX
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 79
   m_LastFolders:
-  - Assets
+  - Assets/FBX
   m_LastFoldersGridSize: 79
   m_LastProjectPath: C:\Users\qindi\Documents\GitHub\PerspectiveGame\PerspectiveGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: 284b0000
-    m_LastClickedID: 19240
-    m_ExpandedIDs: 00000000284b00002a4b00002c4b00002e4b0000304b0000324b0000344b0000364b0000384b00003a4b00003c4b00003e4b0000404b0000424b0000444b0000464b0000484b00004a4b00004c4b00004e4b000000ca9a3b
+    m_SelectedIDs: e44c0000
+    m_LastClickedID: 19684
+    m_ExpandedIDs: 00000000b64c0000b84c0000ba4c0000bc4c0000be4c0000c04c0000c24c0000c44c0000c64c0000c84c0000ca4c0000cc4c0000ce4c0000d04c0000d24c0000d44c0000d64c0000d84c0000da4c0000dc4c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -678,7 +678,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000284b00002a4b00002c4b00002e4b0000304b0000324b0000344b0000364b0000384b00003a4b00003c4b00003e4b0000404b0000424b0000444b0000464b0000484b00004a4b00004c4b00004e4b0000
+    m_ExpandedIDs: 00000000b64c0000b84c0000ba4c0000bc4c0000be4c0000c04c0000c24c0000c44c0000c64c0000c84c0000ca4c0000cc4c0000ce4c0000d04c0000d24c0000d44c0000d64c0000d84c0000da4c0000dc4c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300008411000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
