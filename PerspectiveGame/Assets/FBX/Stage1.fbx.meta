@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 6c844ca108759c743bbb90417137ecdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Carpet
     second: {fileID: 2100000, guid: cbe6668c6ba5e12418f6a288b5ea9897, type: 2}
   - first:
@@ -72,8 +77,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: GlowingWhite
+    second: {fileID: 2100000, guid: 34d9af4d29ff0044d9c0f9b6aa7c9aaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hex_CarpetFloor
+    second: {fileID: 2100000, guid: 8c47c1e22833dec47997cd606d95f716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Light
     second: {fileID: 2100000, guid: 0fff8a1cc7593ee4c86002cf91755a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightBrown
+    second: {fileID: 2100000, guid: 2d343e4898276c046a6abdf667929cda, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -94,6 +114,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: MainRoom_GreenCup
     second: {fileID: 2100000, guid: 00d985d0a786aae4eab56083a3e1956a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainRoom_Light
+    second: {fileID: 2100000, guid: 8f6dd422c0dbb2d469ed7c7f20b88837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 42bdbc8abf6056f48b987a3e603ba480, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -142,6 +172,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Room3_CeilingLight
+    second: {fileID: 2100000, guid: e470819883a171747abe4009b92112ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room3_White
+    second: {fileID: 2100000, guid: 08bb84d3bbb8c004790bce1f32efea63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: StartingRoomFloor
     second: {fileID: 2100000, guid: b3b01f64114cc8d4f98572f78dbf90ba, type: 2}
   - first:
@@ -177,8 +217,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 2100000, guid: 544b1c942a17b99408a53b30d6bd5f8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: WhiteCeiling
     second: {fileID: 2100000, guid: 386d26a67c0841f4db8b8a8ec479c263, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire
+    second: {fileID: 2100000, guid: 0c0ad0612ab33b74ab77a812b4077b9d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
