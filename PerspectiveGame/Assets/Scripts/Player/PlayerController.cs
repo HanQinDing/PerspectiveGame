@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, Mathf.Infinity))
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.gameObject != null)
+            if (Input.GetMouseButtonDown(2) && hit.collider.gameObject != null)
             {
                 Debug.Log(hit.collider.gameObject.transform.parent.name);
                 if (hit.collider.gameObject.transform.parent.transform.GetComponent<PictureController>() != null) //If the object that the player is interacting is a picture
@@ -155,4 +155,5 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 }

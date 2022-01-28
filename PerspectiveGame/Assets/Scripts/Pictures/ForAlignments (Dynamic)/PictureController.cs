@@ -92,8 +92,11 @@ public class PictureController : MonoBehaviour
             Destroy(this.gameObject);   
             
         }
-        
-        
+
+        if (Input.GetMouseButtonDown(0)){
+            aligned = true;
+        }
+
 
 
 

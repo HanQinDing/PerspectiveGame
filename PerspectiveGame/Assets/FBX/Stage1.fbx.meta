@@ -42,8 +42,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Corridor1_WoodenDoor
+    second: {fileID: 2100000, guid: a93bf5baa38cb714cb3440708edc159a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Corridor1wall
     second: {fileID: 2100000, guid: 6efae138d83fe5446b17988f9588456b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2.1_WoodenDoor
+    second: {fileID: 2100000, guid: 01d3dc25f812e5e45a41a91e74c454e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2.2DarkFloor
+    second: {fileID: 2100000, guid: ffad1219ce3b74b46b36d0ca53145f9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2.2Light
+    second: {fileID: 2100000, guid: 708cc8b45ef455d41aceafad9ce30796, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2.2Wall
+    second: {fileID: 2100000, guid: d79cf7b8397cd27449156a8d62c15acc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corridor2.2_WoodenDoor
+    second: {fileID: 2100000, guid: 8c7385265dbba4c4bb3c71d732d82947, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -54,6 +84,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Corridor2Illusion
     second: {fileID: 2100000, guid: 260fb07431a276943bd98dd9673381a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CorridorCeiling
+    second: {fileID: 2100000, guid: 4c1aa15dfbc09134baf6da613bdabded, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -122,6 +157,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MainRoom_Light.001
+    second: {fileID: 2100000, guid: 303d39ef07959c04fae1dcebcfcd2a4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: 42bdbc8abf6056f48b987a3e603ba480, type: 2}
   - first:
@@ -152,6 +192,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Red.001
+    second: {fileID: 2100000, guid: f484510546f20bb41966cc568e59da93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red.003
+    second: {fileID: 2100000, guid: fc091b72c72693546890b593c520a568, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Robert Gonsalves
     second: {fileID: 2100000, guid: 437e16a3cb91652419c03c0fa9694559, type: 2}
   - first:
@@ -172,8 +222,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Room1_WoodenDoor
+    second: {fileID: 2100000, guid: e4bdc810772739a45bf81eac254a7a5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Room3_CeilingLight
     second: {fileID: 2100000, guid: e470819883a171747abe4009b92112ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Room3_Wall
+    second: {fileID: 2100000, guid: b07a209d11d1bc941b328ea9ddf2b9e8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -202,8 +262,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TableLamp_Stand.001
+    second: {fileID: 2100000, guid: bc3e91a327bde404d982e7e0b93b064e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Table_Leg
     second: {fileID: 2100000, guid: fbe41494cb54be84faaf92c90046159c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table_Leg.001
+    second: {fileID: 2100000, guid: 8e2613d245f9ca74c9772ff65fa0ae38, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -242,8 +312,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Wooden_RoomSeparate
+    second: {fileID: 2100000, guid: 8b498ed6ac630e341b96591f6136ac08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: grey
     second: {fileID: 2100000, guid: e1e1e4bdc2a3d9745a18469aeee33b3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey.002
+    second: {fileID: 2100000, guid: df8f2b0f59e52d346808217740a85d8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey.003
+    second: {fileID: 2100000, guid: 81f83408686ba214fb7dfd9845484b79, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
